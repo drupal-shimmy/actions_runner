@@ -19,6 +19,7 @@ jobs:
         # define the list of repos here
         - repo: animate-css/animate.css
           repo_name: animate.css
+          branch: main
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -66,7 +67,7 @@ jobs:
           echo ""
           echo "### Pruning unneeded JSON for repo ${{ matrix.repo_name }}"
           git filter-repo --force --preserve-commit-hashes --path-rename composer.json:legacy.composer.json --path-rename package.json:legacy.package.json
-          git checkout master
+          git checkout ${{ matrix.branch }}
           popd > /dev/null
         shell: bash
       # Generate JSON
@@ -135,8 +136,8 @@ jobs:
             git remote -v
             echo ""
             echo "### Writing to git@github.com:drupal-shimmy/${{ matrix.repo_name }}.git"
-            git config branch.master.remote origin
-            git push -u -f origin master --tags
+            git config branch.${{ matrix.branch }}.remote origin
+            git push -u -f origin ${{ matrix.branch }} --tags
           fi
           popd > /dev/null
         shell: bash
