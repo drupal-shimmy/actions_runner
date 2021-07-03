@@ -1,0 +1,14 @@
+{
+  "name": "@drupal-shimmy/__PLUGIN__",
+  "description": "__PLUGIN__ Drupal shim",
+  "keywords": ["shim", "plugin", "__PLUGIN__"],
+  "homepage": "https://github.com/__PATH__",
+  "bugs": {
+    "url": "https://github.com/__PATH__/issues"
+  },
+  "license" : "(GPL-2.0-or-later OR LGPL-2.1-or-later OR MPL-1.1)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/__PATH__.git"
+	}
+}

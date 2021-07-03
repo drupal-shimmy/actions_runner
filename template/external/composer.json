@@ -1,0 +1,16 @@
+{
+  "name": "drupal-shimmy/__PLUGIN__",
+  "description": "__PLUGIN__ Drupal shim",
+  "type": "drupal-library",
+  "keywords": ["shim", "plugin", "__PLUGIN__"],
+  "homepage": "https://github.com/__PATH__",
+  "license": [
+    "GPL-2.0-or-later",
+    "LGPL-2.1-or-later",
+    "MPL-1.1"
+  ],
+  "support": {
+    "issues": "https://github.com/__PATH__/issues",
+    "source": "https://github.com/__PATH__/tree/master"
+  }
+}
